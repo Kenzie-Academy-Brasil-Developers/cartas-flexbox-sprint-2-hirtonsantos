@@ -6,17 +6,27 @@ html {
     background-color: #FFFFFF;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  flex-basis: 65px;
+}
+
 .icon {color: #BCD2DA;}
 
 .card {
-    /* display, flex-direction */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
 }
 
 .card__description {
-    /* display, flex-direction, justify-content, align-items */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 15px 0;
 }
 
@@ -40,18 +50,21 @@ html {
 }
 
 .cardGroup {
-    /* display */
-  
+    display: flex;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    max-width: 710px;
+    flex-basis: 440px;
   }
   
     .cardGroup__card {
-      /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
       border: none;
       border-radius: 0;
+
     }
   
     .cardGroup__card {
@@ -59,5 +72,8 @@ html {
     }
   
     .cardGroup__cardDescription {
-      /* flex-grow, flex-shrink, flex-basis */
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
     }
