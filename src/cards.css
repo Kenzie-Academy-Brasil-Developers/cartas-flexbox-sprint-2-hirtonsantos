@@ -54,8 +54,7 @@ body {
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
-    max-width: 710px;
-    flex-basis: 440px;
+    width: 708px;
   }
   
     .cardGroup__card {
@@ -64,7 +63,7 @@ body {
       flex-basis: auto;
       border: none;
       border-radius: 0;
-
+      width: 310px;
     }
   
     .cardGroup__card {
@@ -77,3 +76,14 @@ body {
       flex-shrink: 1;
       flex-basis: auto;
     }
+
+@media (max-width: 321px){
+    .cardGroup {
+      flex-direction: column;
+      align-self: center;
+    }
+
+    .cardGroup__card {
+      width: auto;
+    }
+}
