@@ -10,6 +10,8 @@ body {
   display: flex;
   justify-content: center;
   flex-basis: 65px;
+  margin-inline: auto;
+  max-width: 320px;
 }
 
 .icon {color: #BCD2DA;}
@@ -54,16 +56,17 @@ body {
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
-    width: 708px;
-  }
-  
-    .cardGroup__card {
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+  }  
+ .cardGroup__card {
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: auto;
       border: none;
       border-radius: 0;
-      width: 310px;
+      width: 320px;
     }
   
     .cardGroup__card {
@@ -77,13 +80,16 @@ body {
       flex-basis: auto;
     }
 
-@media (max-width: 321px){
-    .cardGroup {
-      flex-direction: column;
-      align-self: center;
+@media (min-width: 400px){
+    
+    body {
+      max-width: 710px;
+      justify-content: center;
     }
-
-    .cardGroup__card {
-      width: auto;
+    
+    .cardGroup {
+      flex-direction: row;
+      max-width: 710px;
+      align-items: inherit;
     }
 }
